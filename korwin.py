@@ -59,14 +59,7 @@ class Korwin:
     ]
 
     def say(self):
-        sentence = ''
-
-        for piece in self.brain:
-            amount = len(piece)
-            position = random.randint(0, amount - 1)
-            sentence += ' ' + piece[position]
-
-        return sentence.strip()
+        return ''.join([random.choice(piece) for piece in self.brain])
 
 k = Korwin()
 
